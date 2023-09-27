@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 function CartOverview() {
+  console.log("yes");
   return (
     <div>
       <p>
