@@ -113,8 +113,8 @@ export async function action({ request }) {
   // const newOrder = await createOrder(order);
 
   // return redirect(`/order/${newOrder.id}`);
-
-  return null;
+  const newOrder = await createOrder(order);
+  return redirect(`/order/${newOrder.id}`);
 }
 
 export default CreateOrder;
