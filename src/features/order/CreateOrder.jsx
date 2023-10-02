@@ -21,6 +21,7 @@ function CreateOrder() {
     status: addressStatus,
     position,
     address,
+    error: errorAddress,
   } = useSelector((state) => state.user);
 
   const isLoadingAddress = addressStatus === 'loading';
@@ -80,12 +81,12 @@ function CreateOrder() {
             />
             {addressStatus === 'error' && (
               <p className="mt-2 rounded-md bg-red-100 p-2 text-xs text-red-700">
-                {formErrors.phone}
+                {errorAddress}
               </p>
             )}
           </div>
           {!position.latitude && !position.longitude && (
-            <span className="absolute  right-[3px] z-50">
+            <span className="rop-[3px]  absolute right-[3px] z-50 md:right-[5px] md:top-[5px]">
               <Button
                 type="small"
                 disabled={isLoadingAddress}
