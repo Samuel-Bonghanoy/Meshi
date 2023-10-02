@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { getAddress } from '../../services/apiGeocoding';
 
 function getPosition() {
@@ -7,7 +7,7 @@ function getPosition() {
   });
 }
 
-async function fetchAddress() {
+const fetchAddress = createAsyncThunk('user/fetchAddress', async function () {
   // 1) We get the user's geolocation position
   const positionObj = await getPosition();
 
@@ -22,7 +22,7 @@ async function fetchAddress() {
 
   // 3) Then we return an object with the data that we are interested in
   return { position, address };
-}
+});
 
 const initialState = {
   username: '',
