@@ -41,12 +41,14 @@ function CreateOrder() {
 
   return (
     <div className="px-4 py-6">
-      <h2 className="mb-8 text-xl font-semibold">Ready to order? Let's go!</h2>
+      <h2 className="mb-8 text-xl font-semibold text-yellow-500">
+        Ready to order? Let's go!
+      </h2>
 
       {/* <Form method="POST" action="/order/new"> */}
       <Form method="POST">
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label className="sm:basis-40">First Name</label>
+          <label className="text-slate-200 sm:basis-40">First Name</label>
           <input
             className="input grow"
             type="text"
@@ -57,7 +59,7 @@ function CreateOrder() {
         </div>
 
         <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label className="sm:basis-40">Phone number</label>
+          <label className="text-slate-200 sm:basis-40">Phone number</label>
           <div className="grow">
             <input className="input w-full" type="tel" name="phone" required />
             {formErrors?.phone && (
@@ -69,7 +71,7 @@ function CreateOrder() {
         </div>
 
         <div className="relative flex flex-col gap-2 before:mb-5 sm:flex-row sm:items-center">
-          <label className="sm:basis-40">Address</label>
+          <label className="text-slate-200 sm:basis-40 ">Address</label>
           <div className="grow">
             <input
               className="input w-full"
@@ -101,7 +103,7 @@ function CreateOrder() {
           )}
         </div>
 
-        <div className="mb-12 flex items-center gap-5">
+        <div className="mb-12 mt-5 flex items-center gap-5">
           <input
             className="h-6 w-6 accent-yellow-400 focus:outline-none focus:ring focus:ring-yellow-400 focus:ring-offset-2"
             type="checkbox"
@@ -110,8 +112,8 @@ function CreateOrder() {
             value={withPriority}
             onChange={(e) => setWithPriority(e.target.checked)}
           />
-          <label htmlFor="priority" className="font-medium">
-            Want to yo give your order priority?
+          <label htmlFor="priority" className="font-medium text-slate-200">
+            Want to give your order priority?
           </label>
         </div>
 

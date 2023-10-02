@@ -18,7 +18,7 @@ export default {
         screen: '100dvh',
       },
       colors: {
-        midnight: '#0D1017',
+        midnight: '#020617',
       },
     },
   },

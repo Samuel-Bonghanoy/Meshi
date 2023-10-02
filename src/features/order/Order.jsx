@@ -37,7 +37,9 @@ function Order() {
   return (
     <div className="space-y-8 px-4 py-6">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text-xl font-semibold">Order #{id} status</h2>
+        <h2 className="text-xl font-semibold text-yellow-500">
+          Order #{id} status
+        </h2>
 
         <div className="space-x-2">
           {priority && (
@@ -51,13 +53,13 @@ function Order() {
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-2 bg-stone-200 px-6 py-5">
+      <div className="flex flex-wrap items-center justify-between gap-2 bg-yellow-400 px-6 py-5">
         <p className="font-medium">
           {deliveryIn >= 0
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
             : 'Order should have arrived'}
         </p>
-        <p className="text-xs text-stone-500">
+        <p className="text-xs text-stone-100">
           (Estimated delivery: {formatDate(estimatedDelivery)})
         </p>
       </div>
@@ -76,7 +78,7 @@ function Order() {
         ))}
       </ul>
 
-      <div className="space-y-2 bg-stone-200 px-6 py-5">
+      <div className="space-y-2 bg-slate-200 px-6 py-5">
         <p className="text-sm font-medium text-stone-600">
           Price pizza: {formatCurrency(orderPrice)}
         </p>
