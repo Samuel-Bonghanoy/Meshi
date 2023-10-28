@@ -51,8 +51,7 @@ npm run start
 
 # Output
 
-<img src="./screenshots/output_with_likes.png" width=800 height=450/>
-<img src="./screenshots/modal_window.png" width=800 height=450/>
-<img src="./screenshots/output_with_comments.png" width=800 height=450/>
+<img src="screenshot.png" />
+
 
 
